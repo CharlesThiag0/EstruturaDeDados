@@ -23,6 +23,14 @@ public class Vetor {
         }
     }
 
+    public String busca(int posicao) {
+        if(!(posicao >= 0 && posicao <= tamanho)) {
+            throw new IllegalArgumentException("Posição inválida!");
+        }
+
+        return elementos[posicao];
+    }
+
     @Override
     public String toString() {
         StringBuilder string = new StringBuilder();
