@@ -17,6 +17,8 @@ public class Main {
 
         System.out.println(vetor);
         System.out.println(vetor.busca(1));
+        System.out.println(vetor.busca("ElemeNto 01"));
+
 
 
     }

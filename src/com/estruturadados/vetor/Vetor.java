@@ -23,12 +23,23 @@ public class Vetor {
         }
     }
 
-    public String busca(int posicao) {
-        if(!(posicao >= 0 && posicao <= tamanho)) {
-            throw new IllegalArgumentException("Posição inválida!");
+   public String busca(int posicao) {
+        if(!(posicao > 0 && posicao <= tamanho)) {
+            throw new IllegalArgumentException("Posição Inválida!");
         }
 
         return elementos[posicao];
+   }
+
+    public int busca(String elemento) {
+        for(int i = 0; i < tamanho; i++) {
+
+            if(elementos[i].equalsIgnoreCase(elemento)){ // n importa se é ou ñ letra maiuscula
+                return i;
+            }
+        }
+
+        return -1;
     }
 
     @Override
