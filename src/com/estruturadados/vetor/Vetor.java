@@ -47,6 +47,21 @@ public class Vetor {
         }
     }
 
+    public void remover(int posicao) {
+        if(!(posicao > 0 && posicao <= tamanho)) {
+            throw new IllegalArgumentException("Posição Inválida!");
+        }
+
+        for(int i = posicao; i < tamanho -1; i++) {
+            elementos[i] = elementos[i +1];
+        }
+
+        tamanho --;
+    }
+
+   /* public void remover(String elemento) {
+        remover(busca(elemento));
+    }*/
 
    public String busca(int posicao) {
         if(!(posicao > 0 && posicao <= tamanho)) {
