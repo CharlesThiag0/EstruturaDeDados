@@ -1,7 +1,5 @@
 package com.estruturadados.vetor;
 
-import java.util.Arrays;
-
 public class Vetor {
     private String[] elementos;
     private int tamanho;
@@ -15,6 +13,8 @@ public class Vetor {
     }
 
     public void adicionarElemento(String elemento) throws Exception {
+        aumentarCapacidade();
+
         if(tamanho < this.elementos.length) {
             this.elementos[tamanho] = elemento;
             tamanho ++;
@@ -24,6 +24,8 @@ public class Vetor {
     }
 
     public void adicionarElemento(String elemento, int posicao) {
+        aumentarCapacidade();
+
          // mover elementos
         for(int i =tamanho -1; i >= posicao; i--) {
             elementos[i +1] = elementos[i];
@@ -32,6 +34,19 @@ public class Vetor {
         elementos[posicao] = elemento;
         tamanho ++;
     }
+
+    public void aumentarCapacidade() {
+        if(this.elementos.length == tamanho) {
+            String[] elementos = new String[tamanho * 2];
+
+            for (int i = 0; i < tamanho; i++) {
+                elementos[i] = this.elementos[i];
+            }
+
+            this.elementos = elementos;
+        }
+    }
+
 
    public String busca(int posicao) {
         if(!(posicao > 0 && posicao <= tamanho)) {

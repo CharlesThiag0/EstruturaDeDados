@@ -4,11 +4,14 @@ import com.estruturadados.vetor.Vetor;
 
 public class Main {
     public static void main(String[] args) {
-        Vetor vetor = new Vetor(10);
+        Vetor vetor = new Vetor(3);
 
         try {
-            vetor.adicionarElemento("elemento 01");
-            vetor.adicionarElemento("elemento 02");
+            vetor.adicionarElemento("A");
+            vetor.adicionarElemento("B");
+            vetor.adicionarElemento("C");
+            vetor.adicionarElemento("D");
+            vetor.adicionarElemento("E");
         } catch (Exception exception) {
             exception.printStackTrace();
         }
@@ -19,8 +22,7 @@ public class Main {
         System.out.println(vetor.busca(1));
         System.out.println(vetor.busca("ElemeNto 01"));
 
-
-
+        System.out.println(vetor);
 
     }
 }
