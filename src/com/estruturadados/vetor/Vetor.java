@@ -23,6 +23,16 @@ public class Vetor {
         }
     }
 
+    public void adicionarElemento(String elemento, int posicao) {
+         // mover elementos
+        for(int i =tamanho -1; i >= posicao; i--) {
+            elementos[i +1] = elementos[i];
+        }
+
+        elementos[posicao] = elemento;
+        tamanho ++;
+    }
+
    public String busca(int posicao) {
         if(!(posicao > 0 && posicao <= tamanho)) {
             throw new IllegalArgumentException("Posição Inválida!");
