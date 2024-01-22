@@ -12,6 +12,12 @@ public class Vetor {
         return tamanho;
     }
 
+    private void posicaoInvalida(int posicao) {
+        if(!(posicao >= 0 && posicao <= tamanho)) {
+            throw new IllegalArgumentException("Posição Inválida!");
+        }
+    }
+
     public void adicionarElemento(String elemento) throws Exception {
         aumentarCapacidade();
 
@@ -48,9 +54,7 @@ public class Vetor {
     }
 
     public void remover(int posicao) {
-        if(!(posicao >= 0 && posicao <= tamanho)) {
-            throw new IllegalArgumentException("Posição Inválida!");
-        }
+        posicaoInvalida(posicao);
 
         for(int i = posicao; i < tamanho -1; i++) {
             elementos[i] = elementos[i +1];
@@ -64,9 +68,7 @@ public class Vetor {
     }
 
    public String busca(int posicao) {
-        if(!(posicao > 0 && posicao <= tamanho)) {
-            throw new IllegalArgumentException("Posição Inválida!");
-        }
+        posicaoInvalida(posicao);
 
         return elementos[posicao];
    }

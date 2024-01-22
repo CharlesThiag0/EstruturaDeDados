@@ -26,7 +26,7 @@ public class Main {
 
         vetor.remover(2);
         System.out.println(vetor);
-        vetor.remover("A");
+        vetor.remover("a");
         System.out.println(vetor);
 
     }
