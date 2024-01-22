@@ -1,11 +1,11 @@
 package com.estruturadados.vetor;
 
 public class Vetor {
-    private String[] elementos;
+    private Object[] elementos;
     private int tamanho;
 
     public Vetor(int capacidade) {
-        this.elementos = new String[capacidade];
+        this.elementos = new Object[capacidade];
     }
 
     public int getTamanho() {
@@ -18,7 +18,7 @@ public class Vetor {
         }
     }
 
-    public void adicionarElemento(String elemento) throws Exception {
+    public void adicionarElemento(Object elemento) throws Exception {
         aumentarCapacidade();
 
         if(tamanho < this.elementos.length) {
@@ -29,7 +29,7 @@ public class Vetor {
         }
     }
 
-    public void adicionarElemento(String elemento, int posicao) {
+    public void adicionarElemento(Object elemento, int posicao) {
         aumentarCapacidade();
 
          // mover elementos
@@ -43,7 +43,7 @@ public class Vetor {
 
     public void aumentarCapacidade() {
         if(this.elementos.length == tamanho) {
-            String[] elementos = new String[tamanho * 2];
+            Object[] elementos = new Object[tamanho * 2];
 
             for (int i = 0; i < tamanho; i++) {
                 elementos[i] = this.elementos[i];
@@ -63,20 +63,20 @@ public class Vetor {
         tamanho --;
     }
 
-    public void remover(String elemento) {
+    public void remover(Object elemento) {
         remover(busca(elemento));
     }
 
-   public String busca(int posicao) {
+   public Object busca(int posicao) {
         posicaoInvalida(posicao);
 
         return elementos[posicao];
    }
 
-    public int busca(String elemento) {
+    public int busca(Object elemento) {
         for(int i = 0; i < tamanho; i++) {
 
-            if(elementos[i].equalsIgnoreCase(elemento)){ // n importa se é ou ñ letra maiuscula
+            if(elementos[i].equals(elemento)){
                 return i;
             }
         }
