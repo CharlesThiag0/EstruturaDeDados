@@ -88,10 +88,13 @@ public class Lista <T> {
                 return i;
             }
 
-            return -1;
         }
 
         return -1;
+    }
+
+    public boolean contem(T elemento) {
+        return busca(elemento) > -1;
     }
 
     @Override
