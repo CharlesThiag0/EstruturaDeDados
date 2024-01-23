@@ -8,13 +8,16 @@ public class AplicacaoLista {
         Lista<String> vetorString = new Lista(2);
 
         try {
-            vetorString.adicionarElemento("elemento 01");
-            vetorString.adicionarElemento("elemento 02");
-            vetorString.adicionarElemento("elemento 03");
+            vetorString.adicionarElemento("a");
+            vetorString.adicionarElemento("b");
+            vetorString.adicionarElemento("c");
+            vetorString.adicionarElemento("a");
         } catch (Exception exception) {
             System.out.println(exception.getMessage());
         }
 
         System.out.println(vetorString.contem("elemento 01"));
+
+        System.out.println(vetorString.ultimaPosicao("a"));
     }
 }

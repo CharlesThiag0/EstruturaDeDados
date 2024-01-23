@@ -81,6 +81,16 @@ public class Lista <T> {
         return elementos[posicao];
     }
 
+    public int ultimaPosicao(Object elemento){
+        for(int i = this.elementos.length -1; i >= 0; i--) {
+            if(this.elementos[i].equals(elemento)) {
+                return i;
+            }
+        }
+
+        return -1;
+    }
+
     public int busca(T elemento) {
         for(int i = 0; i < tamanho; i++) {
 
@@ -96,6 +106,8 @@ public class Lista <T> {
     public boolean contem(T elemento) {
         return busca(elemento) > -1;
     }
+
+
 
     @Override
     public String toString() {
