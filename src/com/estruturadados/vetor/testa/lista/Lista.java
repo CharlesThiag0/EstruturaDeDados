@@ -87,6 +87,8 @@ public class Lista <T> {
             if(elementos[i].equals(elemento)){
                 return i;
             }
+
+            return -1;
         }
 
         return -1;
