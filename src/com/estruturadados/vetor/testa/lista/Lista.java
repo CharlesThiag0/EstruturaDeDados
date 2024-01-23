@@ -79,6 +79,14 @@ public class Lista <T> {
         remover(busca(elemento));
     }
 
+    public void removerAll() {
+        tamanho = 0;
+
+        for(int i = 0; i < elementos.length; i ++) {
+            elementos[i] = null;
+        }
+    }
+
     public T busca(int posicao) {
         posicaoInvalida(posicao);
 
