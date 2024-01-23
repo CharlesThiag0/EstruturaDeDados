@@ -20,6 +20,10 @@ public class Lista <T> {
         return tamanho;
     }
 
+    public T getElemento(int posicao){
+        return busca(posicao);
+    }
+
     private void posicaoInvalida(int posicao) {
         if(!(posicao >= 0 && posicao <= tamanho)) {
             throw new IllegalArgumentException("Posição Inválida!");
@@ -82,7 +86,7 @@ public class Lista <T> {
     }
 
     public int ultimaPosicao(Object elemento){
-        for(int i = this.elementos.length -1; i >= 0; i--) {
+        for(int i = this.elementos.length -1 ; i >= 0; i--) {
             if(this.elementos[i].equals(elemento)) {
                 return i;
             }
