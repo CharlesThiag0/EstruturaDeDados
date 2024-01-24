@@ -5,20 +5,20 @@ import com.estruturadados.vetor.testa.lista.Lista;
 public class AplicacaoLista {
     public static void main(String[] args) {
 
-        Lista<String> vetorString = new Lista(2);
+        Lista<Integer> vetorString = new Lista(2);
 
         try {
-            vetorString.adicionarElemento("a");
-            vetorString.adicionarElemento("b");
-            vetorString.adicionarElemento("c");
-            vetorString.adicionarElemento("a");
+            vetorString.adicionarElemento(1);
+            vetorString.adicionarElemento(2);
+            vetorString.adicionarElemento(3);
+            vetorString.adicionarElemento(1);
         } catch (Exception exception) {
             System.out.println(exception.getMessage());
         }
 
-        System.out.println(vetorString.contem("elemento 01"));
+        System.out.println(vetorString.contem(22));
 
-        System.out.println(vetorString.ultimaPosicao("a"));
+        System.out.println(vetorString.ultimaPosicao(1));
 
 
     }

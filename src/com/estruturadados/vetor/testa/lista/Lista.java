@@ -30,14 +30,12 @@ public class Lista <T> {
         }
     }
 
-    public void adicionarElemento(T elemento) throws Exception {
+    public void adicionarElemento(T elemento) {
         aumentarCapacidade();
 
         if(tamanho < this.elementos.length) {
             this.elementos[tamanho] = elemento;
             tamanho ++;
-        } else {
-            throw new Exception("Ex: capacidade total do vetor preenchida!");
         }
     }
 
@@ -53,7 +51,7 @@ public class Lista <T> {
         tamanho ++;
     }
 
-    public void aumentarCapacidade() {
+    private void aumentarCapacidade() {
         if(this.elementos.length == tamanho) {
             T[] elementos = (T[]) new Object[tamanho * 2];
 
@@ -94,7 +92,7 @@ public class Lista <T> {
     }
 
     public int ultimaPosicao(Object elemento){
-        for(int i = this.elementos.length -1 ; i >= 0; i--) {
+        for(int i = tamanho -1 ; i >= 0; i--) {
             if(this.elementos[i].equals(elemento)) {
                 return i;
             }
@@ -116,7 +114,7 @@ public class Lista <T> {
     }
 
     public boolean contem(T elemento) {
-        return busca(elemento) > -1;
+        return busca(elemento) >= 0;
     }
 
 
