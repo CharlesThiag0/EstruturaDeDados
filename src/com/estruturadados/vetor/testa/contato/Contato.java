@@ -3,13 +3,27 @@ package com.estruturadados.vetor.testa.contato;
 import java.util.Objects;
 
 public class Contato {
-    private final String nome;
-    private final String telefone;
-    private final String email;
+    private  String nome;
+    private  String telefone;
+    private  String email;
+
+    public Contato(){}
 
     public Contato(String nome, String telefone, String email) {
         this.nome = nome;
         this.telefone = telefone;
+        this.email = email;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+
+    public void setEmail(String email) {
         this.email = email;
     }
 
@@ -39,7 +53,9 @@ public class Contato {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Contato contato = (Contato) o;
-        return Objects.equals(nome, contato.nome) && Objects.equals(telefone, contato.telefone) && Objects.equals(email, contato.email);
+        return  Objects.equals(nome, contato.nome)
+                &&
+                Objects.equals(telefone, contato.telefone) && Objects.equals(email, contato.email);
     }
 
     @Override
