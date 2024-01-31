@@ -2,8 +2,8 @@ package com.estruturadados.base;
 
 public class EstruturaEstatica<T> {
 
-    private T[] elementos;
-    private int tamanho;
+    protected T[] elementos;
+    protected int tamanho;
 
     public EstruturaEstatica(int capacidade) {
         this.elementos = (T[]) new Object[capacidade];
@@ -13,8 +13,13 @@ public class EstruturaEstatica<T> {
         this(10);
     }
 
-    private boolean adiciona(T elemento) {
-        // aumentar capacidade
+    public boolean estaVazia() {
+        return tamanho == 0;
+    }
+
+    protected boolean adiciona(T elemento) {
+        aumentarCapacidade();
+
         if(tamanho < elementos.length) {
             this.elementos[tamanho] = elemento;
             tamanho++;
@@ -24,11 +29,11 @@ public class EstruturaEstatica<T> {
         return false;
     }
 
-    private boolean adicona(int posicao, T elemento) {
+    protected boolean adiciona(int posicao, T elemento) {
         if(!(posicao >= 0 && posicao < tamanho)) {
             throw new IllegalArgumentException("Posição inválida");
         }
-        // aumentar capacidade
+        aumentarCapacidade();
 
         for(int i =tamanho-1; i >= posicao; i--){
             elementos[i+1] = elementos[i];
@@ -65,7 +70,7 @@ public class EstruturaEstatica<T> {
             stringBuilder.append(", ");
         }
 
-        if(elementos.length > 0) {
+        if(tamanho > 0) {
             stringBuilder.append(elementos[tamanho -1]);
         }
 
