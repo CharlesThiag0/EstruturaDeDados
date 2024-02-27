@@ -9,7 +9,12 @@ import java.util.Queue;
 public class TestaFilaPrioritaria1 {
     public static void main(String[] args) {
         // (A ORDEM QUE FICA APOS A ORDENAÇÃO NÃO IMPORTA PORQUE SEMPRE SERÁ CHAMADA O PROXIMO DA FILA E APENAS ISTO IMPORTA)
-        Queue<Paciente> filaPrioritaria = new PriorityQueue<>();
+        Queue<Paciente> filaPrioritaria = new PriorityQueue<>(new Comparator<Paciente>() {
+            @Override
+            public int compare(Paciente p1, Paciente p2) {
+                return Integer.valueOf(p1.getPrioridade()).compareTo(p2.getPrioridade());
+            }
+        });
 
 
         filaPrioritaria.add(new Paciente("teste1", 2));

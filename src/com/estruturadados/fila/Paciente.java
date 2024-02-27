@@ -1,6 +1,6 @@
 package com.estruturadados.fila;
 
-public class Paciente implements Comparable<Paciente> {
+public class Paciente/* implements Comparable<Paciente>*/ {
     private String nome;
     private Integer prioridade;
 
@@ -35,7 +35,7 @@ public class Paciente implements Comparable<Paciente> {
                 '}';
     }
 
-    @Override
+   /* @Override
     public int compareTo(Paciente o) {
 
         if(this.prioridade > o.getPrioridade()){
@@ -45,5 +45,5 @@ public class Paciente implements Comparable<Paciente> {
         }
 
         return 0;
-    }
+    }*/
 }
