@@ -6,7 +6,6 @@ public class No<T> {
 
     // precisa guarda a referencia pro proximo no, e assim deixando interligada
     private No<T> proximo;
-
     public No(T elemento) {
         this.elemento = elemento;
         this.proximo = null;
