@@ -8,7 +8,7 @@ public class No<T> {
     private No<T> proximo;
     public No(T elemento) {
         this.elemento = elemento;
-        this.proximo = null;
+        this.proximo = null; // especificando que o proximo será nulo
     }
 
     public No(T elemento, No<T> proximo) {
@@ -28,7 +28,7 @@ public class No<T> {
         return proximo;
     }
 
-    public void setProximo(No<T> proximo) {
+    public void setProximo(No<T> proximo)  {
         this.proximo = proximo;
     }
 
