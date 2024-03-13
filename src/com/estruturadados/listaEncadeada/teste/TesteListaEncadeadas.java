@@ -11,12 +11,16 @@ public class TesteListaEncadeadas {
         System.out.println(listaEncadeada);
         System.out.println("Tamanho é " + listaEncadeada.getTamanho());
 
-        listaEncadeada.adicionar(2);
+        listaEncadeada.adicionar(4);
 
         System.out.println(listaEncadeada);
-        listaEncadeada.adicionar(3);
+        listaEncadeada.adicionar(4);
 
         System.out.println(listaEncadeada);
         System.out.println("Tamanho é " + listaEncadeada.getTamanho());
+
+        System.out.println("Saida");
+        System.out.println();
+
     }
 }

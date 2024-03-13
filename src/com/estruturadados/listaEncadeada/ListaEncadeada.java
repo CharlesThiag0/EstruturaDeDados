@@ -29,8 +29,28 @@ public class ListaEncadeada<T> {
 
     @Override
     public String toString() {
-        return "ListaEncadeada[" +
-                "inicio=" + inicio +
-                ']';
+
+        if(this.tamanho == 0) {
+            return "[]";
+        }
+
+       // maneira 2
+        StringBuilder stringBuilder = new StringBuilder("[");
+        No<T> atual = this.inicio;
+
+        for(int i = 0; i < tamanho-1 ; i++){
+            stringBuilder.append(atual.getElemento()).append(",");
+            atual = atual.getProximo();
+        }
+        stringBuilder.append(atual.getElemento()).append("]");
+
+        // maneira 1
+        /*stringBuilder.append(atual.getElemento()).append(",");
+        while(atual.getProximo() != null) {
+
+            atual = atual.getProximo();
+            stringBuilder.append(atual.getElemento()).append(",");
+        }*/
+        return stringBuilder.toString();
     }
 }
