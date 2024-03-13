@@ -27,6 +27,23 @@ public class ListaEncadeada<T> {
         return ultimo;
     }
 
+    public void limpar() {
+
+        for (No<T> atual = this.inicio; atual != null;) { // for com criação da variavel de controle e condição com Nó
+           // alterando a variavel de controle
+            No<T> proximo = atual.getProximo(); // armazenando o proximo
+
+            atual.setElemento(null);
+            atual.setProximo(null);
+
+            atual = proximo; // apontando o proximo para ser o atual
+        }
+
+        this.inicio = null;
+        this.ultimo = null;
+        this.tamanho = 0;
+    }
+
     @Override
     public String toString() {
 
