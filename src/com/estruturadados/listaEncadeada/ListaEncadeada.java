@@ -39,6 +39,18 @@ public class ListaEncadeada<T> {
             atual = proximo; // apontando o proximo para ser o atual
         }
 
+        //versão 2
+        /*
+        for (No<T> atual = this.inicio; atual != null; atual = atual.getProximo()) {
+            atual.setElemento(null);
+            atual.setProximo(null);
+        }
+
+             this.inicio = null;
+             this.ultimo = null;
+             this.tamanho = 0;
+         */
+
         this.inicio = null;
         this.ultimo = null;
         this.tamanho = 0;
