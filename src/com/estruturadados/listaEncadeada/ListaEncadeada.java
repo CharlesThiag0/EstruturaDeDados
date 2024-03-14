@@ -6,6 +6,8 @@ public class ListaEncadeada<T> {
     private No<T> ultimo;
     private int tamanho;
 
+    private final int NAO_ENCONTRADO = -1;
+
     public void adicionar(T elemento){
         No<T> celula = new No<T>(elemento); // criando o Nó
 
@@ -40,20 +42,35 @@ public class ListaEncadeada<T> {
         }
 
         //versão 2
-        /*
-        for (No<T> atual = this.inicio; atual != null; atual = atual.getProximo()) {
+
+        /*for (No<T> atual = this.inicio; atual != null; atual = atual.getProximo()) {
             atual.setElemento(null);
             atual.setProximo(null);
         }
 
              this.inicio = null;
              this.ultimo = null;
-             this.tamanho = 0;
-         */
+             this.tamanho = 0;*/
+
 
         this.inicio = null;
         this.ultimo = null;
         this.tamanho = 0;
+    }
+
+
+    public Integer busca(T elemento) {
+        int tamanho = 0;
+
+        for (No<T> atual = this.inicio; atual != null; atual = atual.getProximo()) {
+            tamanho ++;
+
+            if(atual.getElemento().equals(elemento)) {
+                return tamanho;
+            }
+        }
+
+        return NAO_ENCONTRADO;
     }
 
     @Override

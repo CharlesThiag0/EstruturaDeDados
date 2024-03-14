@@ -14,14 +14,16 @@ public class TesteListaEncadeadas {
         listaEncadeada.adicionar(4);
 
         System.out.println(listaEncadeada);
-        listaEncadeada.adicionar(4);
+        listaEncadeada.adicionar(5);
 
         System.out.println(listaEncadeada);
         System.out.println("Tamanho é " + listaEncadeada.getTamanho());
 
-        System.out.println("limpar");
+      /*  System.out.println("limpar");
         listaEncadeada.limpar();
         System.out.println(listaEncadeada);
+*/
+        System.out.println(listaEncadeada.busca(5));
 
     }
 }
