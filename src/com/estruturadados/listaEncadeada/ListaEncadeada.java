@@ -58,6 +58,44 @@ public class ListaEncadeada<T> {
         this.tamanho = 0;
     }
 
+    // maneira que pensei
+    /*public T busca(int posicao) {
+
+
+        if(!(posicao <= this.tamanho && posicao > 0)){
+            throw new IllegalArgumentException("Posicção inválida!");
+        }
+
+            int pos = 0;
+            for(No<T> atual = this.inicio; atual != null; atual = atual.getProximo()) {
+                pos++;
+
+                if(pos == posicao){
+                    return atual.getElemento();
+                }
+            }
+
+        return null;
+    }*/
+
+    // maneira correta
+    private No<T> buscaPorPosicao(int posicao) {
+        if(!(posicao <= this.tamanho && posicao > 0)){
+            throw new IllegalArgumentException("Posicão inválida!");
+        }
+
+        No<T> noAtual = this.inicio;
+
+        for (int i = 0; i < posicao ; i++) {
+            noAtual = noAtual.getProximo();
+        }
+
+        return noAtual;
+    }
+
+    public T busca(int posicao) {
+        return buscaPorPosicao(posicao).getElemento();
+    }
 
     public Integer busca(T elemento) {
         int tamanho = 0;

@@ -23,7 +23,14 @@ public class TesteListaEncadeadas {
         listaEncadeada.limpar();
         System.out.println(listaEncadeada);
 */
-        System.out.println(listaEncadeada.busca(5));
+        try {
+            System.out.println(listaEncadeada.busca(-1));
+        } catch (IllegalArgumentException e){
+            System.out.println(e.getMessage());
+        }
+        System.out.println(listaEncadeada.busca(1));
+        System.out.println(listaEncadeada.busca(2));
+
 
     }
 }
