@@ -126,7 +126,21 @@ public class ListaEncadeada<T> {
         this.tamanho++;
     }
 
+    public void adicionar(int posicao, T elemento){
+        if(posicao < 0 || posicao > this.tamanho){
+            throw new IllegalArgumentException("Posição inválida");
+        } else if (posicao == 0) {
+            adicionarNoInicio(elemento);
+        } else {
 
+            No<T> anterirNo = this.buscaPorPosicao(posicao);
+            No<T> proximoNo = anterirNo.getProximo();
+            No<T> novoNo = new No<>(elemento, proximoNo);
+            anterirNo.setProximo(novoNo);
+
+            this.tamanho++;
+        }
+    }
 
     @Override
     public String toString() {
