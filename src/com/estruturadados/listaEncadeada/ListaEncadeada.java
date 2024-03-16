@@ -111,6 +111,23 @@ public class ListaEncadeada<T> {
         return NAO_ENCONTRADO;
     }
 
+    public void adicionarNoInicio(T elemento) {
+
+        if(this.tamanho == 0) {
+            No<T> novoNo = new No<>(elemento);
+            this.inicio = novoNo;
+            this.ultimo = novoNo;
+
+        } else {
+             No<T> novoNo = new No<>(elemento, this.inicio);
+             this.inicio = novoNo;
+        }
+
+        this.tamanho++;
+    }
+
+
+
     @Override
     public String toString() {
 

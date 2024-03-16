@@ -31,6 +31,10 @@ public class TesteListaEncadeadas {
         System.out.println(listaEncadeada.busca(1));
         System.out.println(listaEncadeada.busca(2));
 
+        System.out.println("teste de recolocação");
+        listaEncadeada.adicionar(3, 6);
+        System.out.println(listaEncadeada);
+
 
     }
 }
