@@ -133,10 +133,12 @@ public class ListaEncadeada<T> {
             adicionarNoInicio(elemento);
         } else {
 
-            No<T> anterirNo = this.buscaPorPosicao(posicao);
-            No<T> proximoNo = anterirNo.getProximo();
-            No<T> novoNo = new No<>(elemento, proximoNo);
-            anterirNo.setProximo(novoNo);
+            No<T> anteriorNo = this.buscaPorPosicao(posicao); // armazenando o No anterior com a posição desejada
+            No<T> proximoNo = anteriorNo.getProximo(); // armazenando o No seguinte para ñ perde os No ligados a ele
+
+            No<T> novoNo = new No<>(elemento, proximoNo); // criando o novo No e assim encadeando com o proximoNo
+            anteriorNo.setProximo(novoNo); // armazenando o novo no como seguinte sendo assim subscrevendo em cima
+            // do antigo e assim adicionando na posição desejada sem perde os No ligados
 
             this.tamanho++;
         }
