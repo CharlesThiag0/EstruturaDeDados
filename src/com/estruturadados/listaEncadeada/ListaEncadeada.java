@@ -80,7 +80,7 @@ public class ListaEncadeada<T> {
 
     // maneira correta
     private No<T> buscaPorPosicao(int posicao) {
-        if(!(posicao <= this.tamanho && posicao > 0)){
+        if(!(posicao < this.tamanho && posicao >= 0)){
             throw new IllegalArgumentException("Posicão inválida!");
         }
 
@@ -130,16 +130,16 @@ public class ListaEncadeada<T> {
         if(posicao < 0 || posicao > this.tamanho){
             throw new IllegalArgumentException("Posição inválida");
         } else if (posicao == 0) {
-            adicionarNoInicio(elemento);
+            this.adicionarNoInicio(elemento);
         } else {
 
-            No<T> anteriorNo = this.buscaPorPosicao(posicao); // armazenando o No anterior com a posição desejada
+            No<T> anteriorNo = this.buscaPorPosicao(posicao -1); // armazenando o No anterior com a posição desejada
             No<T> proximoNo = anteriorNo.getProximo(); // armazenando o No seguinte para ñ perde os No ligados a ele
 
             No<T> novoNo = new No<>(elemento, proximoNo); // criando o novo No e assim encadeando com o proximoNo
-            anteriorNo.setProximo(novoNo); // armazenando o novo no como seguinte sendo assim subscrevendo em cima
+            anteriorNo.setProximo(novoNo);
+            // armazenando o novo no como seguinte sendo assim subscrevendo em cima
             // do antigo e assim adicionando na posição desejada sem perde os No ligados
-
             this.tamanho++;
         }
     }
