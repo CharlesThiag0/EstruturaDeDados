@@ -35,7 +35,7 @@ public class TesteListaEncadeadas {
 
 
         System.out.println("teste de recolocação");
-        listaEncadeada.adicionar(1);
+  /*      listaEncadeada.adicionar(1);
         listaEncadeada.adicionar(2);
         listaEncadeada.adicionar(4);
 
@@ -44,9 +44,20 @@ public class TesteListaEncadeadas {
         listaEncadeada.adicionar(0, 0);
         listaEncadeada.adicionar(5, 5);
 
-        listaEncadeada.removerInicio();
+        listaEncadeada.removerInicio();*/
+        listaEncadeada.adicionar(1);
+        listaEncadeada.adicionar(2);
+        listaEncadeada.adicionar(3);
 
+        System.out.println("Removido: " +  listaEncadeada.removerFinal());
         System.out.println(listaEncadeada);
+
+        System.out.println("Removido: " +  listaEncadeada.removerFinal());
+        System.out.println(listaEncadeada);
+
+        System.out.println("Removido: " +  listaEncadeada.removerFinal());
+        System.out.println(listaEncadeada);
+
         /*listaEncadeada.adicionar(3);
         listaEncadeada.adicionar(4);
         listaEncadeada.adicionar(5);

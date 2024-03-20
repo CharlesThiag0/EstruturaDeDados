@@ -149,6 +149,7 @@ public class ListaEncadeada<T> {
             throw new RuntimeException("Nada adicionado a lista");
         }
 
+        T removido = inicio.getElemento();
         this.inicio = inicio.getProximo();
         tamanho--;
 
@@ -157,7 +158,25 @@ public class ListaEncadeada<T> {
             ultimo = null;
         }
 
-        return this.inicio.getElemento();
+        return removido;
+    }
+
+    public T removerFinal() {
+        if(tamanho == 0)  {
+            throw new RuntimeException("Nada adicionado a lista");
+        }
+
+        if(tamanho == 1)  {
+           return this.removerInicio();
+        }
+
+        No<T> penultimoNo = this.buscaPorPosicao(tamanho -2); // menos 2 porque queremos o penultimo
+        T removido = penultimoNo.getProximo().getElemento();
+        penultimoNo.setProximo(null);
+        ultimo = penultimoNo;
+        tamanho--;
+
+        return removido;
     }
 
 
