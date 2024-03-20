@@ -44,6 +44,8 @@ public class TesteListaEncadeadas {
         listaEncadeada.adicionar(0, 0);
         listaEncadeada.adicionar(5, 5);
 
+        listaEncadeada.removerInicio();
+
         System.out.println(listaEncadeada);
         /*listaEncadeada.adicionar(3);
         listaEncadeada.adicionar(4);

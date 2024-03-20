@@ -144,6 +144,23 @@ public class ListaEncadeada<T> {
         }
     }
 
+    public T removerInicio() {
+        if(tamanho == 0)  {
+            throw new RuntimeException("Nada adicionado a lista");
+        }
+
+        this.inicio = inicio.getProximo();
+        tamanho--;
+
+        if(tamanho == 0) {
+            // ñ necessario inicio ser nulo pq se o inicio.getProximo ja podera ser null
+            ultimo = null;
+        }
+
+        return this.inicio.getElemento();
+    }
+
+
     @Override
     public String toString() {
 
