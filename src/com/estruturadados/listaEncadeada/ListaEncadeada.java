@@ -32,7 +32,7 @@ public class ListaEncadeada<T> {
 
 
     private boolean posicaoNaoExiste(int posicao ) {
-        return (!(posicao > tamanho || posicao < this.tamanho));
+        return (posicao > tamanho || posicao < 0);
     }
 
     public void limpar() {
