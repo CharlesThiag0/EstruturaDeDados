@@ -185,6 +185,27 @@ public class ListaEncadeada<T> {
         return removido;
     }
 
+    public T removerPosicao(int posicao) {
+        if(posicaoNaoExiste(posicao)){
+            throw new IllegalArgumentException(NAO_EXISTE);
+        }
+
+        if (posicao == 0) {
+            return removerInicio();
+        }
+
+        if(posicao == this.tamanho-1){
+            return removerFinal();
+        }
+
+        No<T> anteriorNo = this.buscaPorPosicao(posicao - 1);
+        No<T> removidoNo = anteriorNo.getProximo();
+        anteriorNo.setProximo(removidoNo.getProximo());
+        this.tamanho--;
+
+        return removidoNo.getElemento();
+    }
+
 
     @Override
     public String toString() {

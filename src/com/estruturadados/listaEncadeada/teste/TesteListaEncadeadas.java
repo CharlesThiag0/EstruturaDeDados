@@ -71,6 +71,21 @@ public class TesteListaEncadeadas {
         }
         System.out.println(listaEncadeada);*/
 
+        listaEncadeada.adicionar(1);
+        listaEncadeada.adicionar(2);
+        listaEncadeada.adicionar(3);
+        System.out.println(listaEncadeada);
+
+        System.out.println( "Removido " + listaEncadeada.removerPosicao(2));
+        System.out.println(listaEncadeada);
+
+        System.out.println( "Removido " + listaEncadeada.removerPosicao(1));
+        System.out.println(listaEncadeada);
+
+        System.out.println( "Removido " + listaEncadeada.removerPosicao(0));
+        System.out.println(listaEncadeada);
+
+
 
     }
 }
