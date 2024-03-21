@@ -45,7 +45,7 @@ public class TesteListaEncadeadas {
         listaEncadeada.adicionar(5, 5);
 
         listaEncadeada.removerInicio();*/
-        listaEncadeada.adicionar(1);
+        /*listaEncadeada.adicionar(1);
         listaEncadeada.adicionar(2);
         listaEncadeada.adicionar(3);
 
@@ -56,7 +56,7 @@ public class TesteListaEncadeadas {
         System.out.println(listaEncadeada);
 
         System.out.println("Removido: " +  listaEncadeada.removerFinal());
-        System.out.println(listaEncadeada);
+        System.out.println(listaEncadeada);*/
 
         /*listaEncadeada.adicionar(3);
         listaEncadeada.adicionar(4);
