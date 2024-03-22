@@ -227,6 +227,21 @@ public class ListaEncadeada<T> {
           return (T[]) array;
     }
 
+    /*
+    public ArrayList<T> transformarVetor() {
+
+        No<T> listaLigada = this.inicio;
+        ArrayList<T> lista = new ArrayList<>();
+
+        for (int i = 0; i < this.tamanho; i++) {
+            lista.add(listaLigada.getElemento());
+            listaLigada = listaLigada.getProximo();
+        }
+
+        return lista;
+    }
+    */
+
     @Override
     public String toString() {
 
