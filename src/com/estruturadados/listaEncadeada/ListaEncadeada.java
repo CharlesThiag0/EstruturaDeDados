@@ -1,5 +1,7 @@
 package com.estruturadados.listaEncadeada;
 
+import java.util.ArrayList;
+
 public class ListaEncadeada<T> {
 
     private No<T> inicio;
@@ -206,6 +208,24 @@ public class ListaEncadeada<T> {
         return removidoNo.getElemento();
     }
 
+
+    @SuppressWarnings("unchecked")
+    public T[] transformarVetor() {
+        if(this.tamanho == 0) {
+            return (T[]) new Object[0];
+        }
+
+        Object[] array = new Object[this.tamanho];
+
+        No<T> noAtual = this.inicio;
+        for (int i = 0; i < this.tamanho; i++) {
+            array[i] = noAtual.getElemento();
+
+            noAtual = noAtual.getProximo();
+        }
+
+          return (T[]) array;
+    }
 
     @Override
     public String toString() {

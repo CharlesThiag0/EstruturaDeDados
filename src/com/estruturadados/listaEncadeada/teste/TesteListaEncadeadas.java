@@ -2,7 +2,7 @@ package com.estruturadados.listaEncadeada.teste;
 
 import com.estruturadados.listaEncadeada.ListaEncadeada;
 
-import java.util.LinkedList;
+import java.util.Arrays;
 
 public class TesteListaEncadeadas {
     public static void main(String[] args) {
@@ -76,15 +76,14 @@ public class TesteListaEncadeadas {
         listaEncadeada.adicionar(3);
         System.out.println(listaEncadeada);
 
-        System.out.println( "Removido " + listaEncadeada.removerPosicao(2));
+        /*System.out.println( "Removido " + listaEncadeada.removerPosicao(2));
         System.out.println(listaEncadeada);
 
         System.out.println( "Removido " + listaEncadeada.removerPosicao(1));
         System.out.println(listaEncadeada);
 
         System.out.println( "Removido " + listaEncadeada.removerPosicao(0));
-        System.out.println(listaEncadeada);
-
+        System.out.println(listaEncadeada);*/
 
 
     }
