@@ -242,6 +242,30 @@ public class ListaEncadeada<T> {
     }
     */
 
+
+    /*
+    logica deste algoritmo é DETRAZ PARA FRENTE PQ:
+    armazenar o proximo, setar o proximo com anterior,
+    o anterior apontara pro atual e apos o atual apontara para o proximo e no fim o anterior tera a ordem invertida
+    jaq estamos setando sempre o proximo(detraz para frente) e assim definindo o inicio com o anterior
+     */
+
+    public void inverte() {
+        No<T> atual = this.inicio;
+        No<T> proximo;
+        No<T> anterior = null;
+
+        while (atual != null) {
+
+            proximo = atual.getProximo();
+            atual.setProximo(anterior);
+            anterior = atual;
+            atual = proximo;
+        }
+
+        this.inicio = anterior;
+    }
+
     @Override
     public String toString() {
 

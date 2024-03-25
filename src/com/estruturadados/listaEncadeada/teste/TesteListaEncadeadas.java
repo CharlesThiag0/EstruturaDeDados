@@ -74,6 +74,9 @@ public class TesteListaEncadeadas {
         listaEncadeada.adicionar(1);
         listaEncadeada.adicionar(2);
         listaEncadeada.adicionar(3);
+        listaEncadeada.adicionar(4);
+        listaEncadeada.adicionar(5);
+        listaEncadeada.adicionar(6);
         System.out.println(listaEncadeada);
 
         /*System.out.println( "Removido " + listaEncadeada.removerPosicao(2));
@@ -84,6 +87,9 @@ public class TesteListaEncadeadas {
 
         System.out.println( "Removido " + listaEncadeada.removerPosicao(0));
         System.out.println(listaEncadeada);*/
+
+        listaEncadeada.inverte();
+        System.out.println(listaEncadeada);
 
 
     }
