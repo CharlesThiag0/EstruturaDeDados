@@ -4,11 +4,12 @@ import java.time.LocalDateTime;
 
 public class Automovel {
 
-    private final String veiculo;
-    private final Long id;
-    private final Double preco;
-    private final LocalDateTime dateTime;
-    private final String dono;
+    private  String veiculo;
+    private  Long id;
+    private  Double preco;
+    private  LocalDateTime dateTime;
+    private  String dono;
+    private Automovel proximo;
 
     public Automovel(String veiculo, Long id, Double preco, LocalDateTime dateTime, String dono) {
         this.veiculo = veiculo;
@@ -16,6 +17,9 @@ public class Automovel {
         this.preco = preco;
         this.dateTime = dateTime;
         this.dono = dono;
+    }
+
+    public Automovel(Automovel automovel) {
     }
 
     public String getVeiculo() {
@@ -36,6 +40,14 @@ public class Automovel {
 
     public String getDono() {
         return dono;
+    }
+
+    public Automovel getProximo() {
+        return proximo;
+    }
+
+    public void setProximo(Automovel proximo) {
+        this.proximo = proximo;
     }
 
     @Override
