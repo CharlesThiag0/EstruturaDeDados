@@ -1,9 +1,8 @@
 package com.estruturadados.listaEncadeada.pratica;
 
 public class FusaoDuasListasOrdenadas {
-    public static void main(String[] args) {
-        FusaoDuasListasOrdenadas fusao = new FusaoDuasListasOrdenadas();
 
+    public static void main(String[] args) {
         NoLista noLista1 = new NoLista(1);
         noLista1.setProximo(new NoLista(3));
         noLista1.getProximo().setProximo(new NoLista(5));
@@ -14,7 +13,7 @@ public class FusaoDuasListasOrdenadas {
         noLista2.getProximo().setProximo(new NoLista(6));
        // System.out.println(noLista2);
 
-        NoLista listaFundiada = fusao.fundir(noLista1, noLista2);
+        NoLista listaFundiada = fundir(noLista1, noLista2);
         System.out.println(listaFundiada.toString());
     }
     public static NoLista fundir(NoLista noLista1, NoLista noLista2) {
