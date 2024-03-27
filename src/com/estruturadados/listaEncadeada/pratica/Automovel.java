@@ -4,11 +4,11 @@ import java.time.LocalDateTime;
 
 public class Automovel {
 
-    private String veiculo;
-    private Long id;
-    private Double preco;
-    private LocalDateTime dateTime;
-    private String dono;
+    private final String veiculo;
+    private final Long id;
+    private final Double preco;
+    private final LocalDateTime dateTime;
+    private final String dono;
 
     public Automovel(String veiculo, Long id, Double preco, LocalDateTime dateTime, String dono) {
         this.veiculo = veiculo;
