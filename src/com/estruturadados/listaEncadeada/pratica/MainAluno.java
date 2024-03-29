@@ -12,5 +12,12 @@ public class MainAluno {
         System.out.println(lista);
         lista.addFirst(new Aluno("Pedro", 21, 6.0));
         System.out.println(lista);
+
+        lista.addEnd(new Aluno("J2", 10, 1.5));
+        System.out.println(lista);
+
+
+
+
     }
 }

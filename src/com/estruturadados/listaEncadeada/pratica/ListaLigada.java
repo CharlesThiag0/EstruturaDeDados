@@ -14,9 +14,23 @@ public class ListaLigada {
             novoPrimeiro = new NoAluno(aluno, this.primeiro);
             // fazer apontar para o No criado
             this.primeiro = novoPrimeiro;
+            tamanho++;
         }
     //o metudo inserir no fim
+    public void addEnd(Aluno aluno) {
+        NoAluno novoNo = new NoAluno(aluno);
 
+        if (primeiro == null) {
+            primeiro = novoNo;
+            return;
+        }
+
+        NoAluno atual = this.primeiro;
+        while(atual.getProximo() != null) {
+            atual = atual.getProximo();
+        }
+        atual.setProximo(novoNo);
+    }
     //imprimir
 
     // buscar por nome
