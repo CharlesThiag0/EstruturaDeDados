@@ -20,15 +20,21 @@ public class ListaLigada {
     public void addEnd(Aluno aluno) {
         NoAluno novoNo = new NoAluno(aluno);
 
+        // verificar se a lista esta vazia
         if (primeiro == null) {
             primeiro = novoNo;
             return;
         }
 
+        // pegando atual para percorrer
         NoAluno atual = this.primeiro;
+
+        // percorrer ate achar o atual.proximo sendo nulo
         while(atual.getProximo() != null) {
             atual = atual.getProximo();
         }
+
+        //para poder adiciona-la
         atual.setProximo(novoNo);
     }
     //imprimir
