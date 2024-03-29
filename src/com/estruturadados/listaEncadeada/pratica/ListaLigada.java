@@ -38,7 +38,14 @@ public class ListaLigada {
         atual.setProximo(novoNo);
     }
     //imprimir
-
+    public void imprimirListaLigada() {
+        System.out.println("Elementos da lista ligada:");
+        NoAluno atual = this.primeiro;
+        while(atual != null) {
+            System.out.println(atual.getAluno());
+            atual = atual.getProximo();
+        }
+    }
     // buscar por nome
 
 

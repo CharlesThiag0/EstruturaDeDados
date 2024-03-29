@@ -16,6 +16,8 @@ public class MainAluno {
         lista.addEnd(new Aluno("J2", 10, 1.5));
         System.out.println(lista);
 
+        lista.imprimirListaLigada();
+
 
 
 
