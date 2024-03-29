@@ -8,6 +8,11 @@ public class NoAluno {
         this.aluno = aluno;
     }
 
+    public NoAluno(Aluno aluno, NoAluno proximo) {
+        this.aluno = aluno;
+        this.proximo = proximo;
+    }
+
     public Aluno getAluno() {
         return aluno;
     }
