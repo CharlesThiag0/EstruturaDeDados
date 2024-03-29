@@ -18,8 +18,7 @@ public class MainAluno {
 
         lista.imprimirListaLigada();
 
-
-
-
+        String alunoBusca = "Maria";
+        System.out.println("busca por: " + lista.buscaAluno(alunoBusca));
     }
 }

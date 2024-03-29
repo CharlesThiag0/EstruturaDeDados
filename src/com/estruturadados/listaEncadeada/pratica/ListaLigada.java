@@ -47,7 +47,19 @@ public class ListaLigada {
         }
     }
     // buscar por nome
+    public boolean buscaAluno(String nome) {
+        NoAluno atual = this.primeiro;
+        while (atual != null) {
+            if(atual.getAluno().getNome().equals(nome)){
+                System.out.println(atual.getAluno());
+                return true;
+            }
 
+            atual = atual.getProximo();
+        }
+
+        return false;
+    }
 
     @Override
     public String toString() {
